@@ -1,5 +1,16 @@
 # 🎨 Visual Muse — ComfyUI AI 视觉缪斯
 
+
+## 效果展示（Visual Muse 示例）
+
+| ![赛博朋克霓虹少女](examples/cyberpunk_neon_girl.png) | ![赛博雨夜兜帽少女](examples/cyberpunk_hooded_hacker.png) | ![赛博都市耳机少女](examples/cyberpunk_street_girl.png) |
+|---|---|---|
+| 画一张赛博朋克风，霓虹雨夜中的未来少女特写 | 画一张赛博朋克风，绿色霓虹与兜帽黑客少女 | 画一张赛博朋克风，雨夜街头的耳机少女 |
+
+| ![动漫霓虹机甲少女](examples/anime_neon_girl.png) | ![吉卜力花田小猫](examples/ghibli_cat_meadow.png) |  |
+|---|---|---|
+| 画一张高饱和动漫风，霓虹机甲耳机少女 | 画一张宫崎骏风格的猫在花田里奔跑 |  |
+
 > 用自然语言对话生成 AI 图片的 OpenClaw 技能包
 
 ## 效果演示
