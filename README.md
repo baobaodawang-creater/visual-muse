@@ -158,3 +158,15 @@ Built with OpenClaw + ComfyUI + Claude
 ## 踩坑指南
 
 首次使用遇到问题？查看 [TROUBLESHOOTING.md](./TROUBLESHOOTING.md)，覆盖常见问题：黑图修复、Skill调度、Token优化、记忆系统、模型选择建议。
+
+## 模型热切换
+
+Visual Muse 支持一行命令在不同 LLM 之间切换 painter 模型：
+```bash
+bash scripts/switch-painter-model.sh gemini       # ~$0.005/次（推荐日常）
+bash scripts/switch-painter-model.sh gpt-nano     # ~$0.003/次（最便宜）
+bash scripts/switch-painter-model.sh claude       # ~$0.07/次（最强）
+bash scripts/switch-painter-model.sh claude-haiku # ~$0.01/次
+```
+
+所有模型通过 Ofox (ofox.ai) 统一调用，无需分别注册。ComfyUI 本地推理完全免费，花钱的只是 LLM 理解需求的那一轮调用。
