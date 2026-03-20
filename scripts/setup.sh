@@ -119,10 +119,10 @@ cat > "$AI_STUDIO_DIR/start_comfyui.sh" << 'STARTEOF'
 set -euo pipefail
 source "$HOME/ai-studio/comfyui-venv/bin/activate"
 cd "$HOME/ai-studio/comfyui"
-echo "[信息] 启动 ComfyUI（listen 0.0.0.0:8188 --highvram）..."
+echo "[信息] 启动 ComfyUI（listen 0.0.0.0:8188 --highvram --fp32-vae）..."
 echo "[信息] 浏览器访问 http://127.0.0.1:8188"
 echo "[信息] 按 Ctrl+C 停止"
-python main.py --listen 0.0.0.0 --port 8188 --highvram
+python main.py --listen 0.0.0.0 --port 8188 --highvram --fp32-vae
 STARTEOF
 chmod +x "$AI_STUDIO_DIR/start_comfyui.sh"
 ok "启动脚本已生成"

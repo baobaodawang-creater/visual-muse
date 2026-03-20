@@ -154,3 +154,7 @@ MIT-0
 ## 作者
 
 Built with OpenClaw + ComfyUI + Claude
+
+## 踩坑指南
+
+首次使用遇到问题？查看 [TROUBLESHOOTING.md](./TROUBLESHOOTING.md)，覆盖常见问题：黑图修复、Skill调度、Token优化、记忆系统、模型选择建议。
