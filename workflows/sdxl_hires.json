@@ -8,7 +8,7 @@
       "sampler_name": "euler",
       "scheduler": "normal",
       "denoise": 1.0,
-      "model": ["4", 0],
+      "model": ["10", 0],
       "positive": ["6", 0],
       "negative": ["7", 0],
       "latent_image": ["5", 0]
@@ -52,8 +52,31 @@
   "9": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "creative_workshop/sdxl",
-      "images": ["8", 0]
+      "filename_prefix": "creative_workshop/hires",
+      "images": ["12", 0]
+    }
+  },
+  "10": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "lora_name": "detail_tweaker_xl.safetensors",
+      "strength_model": 0.5,
+      "strength_clip": 0.5,
+      "model": ["4", 0],
+      "clip": ["4", 1]
+    }
+  },
+  "11": {
+    "class_type": "UpscaleModelLoader",
+    "inputs": {
+      "model_name": "4x-UltraSharp.pth"
+    }
+  },
+  "12": {
+    "class_type": "ImageUpscaleWithModel",
+    "inputs": {
+      "upscale_model": ["11", 0],
+      "image": ["8", 0]
     }
   },
   "13": {

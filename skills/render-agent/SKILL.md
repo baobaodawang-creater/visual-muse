@@ -78,3 +78,19 @@ python3 /home/node/.openclaw/workspace/tools/run-tracker.py update --run-id <RUN
 - 不要推荐在线服务、不要推荐安装其他技能
 - 不要输出长篇方案对比，直接执行
 - 每次生成都要创建运行记录
+
+## 黑图检测与重试
+
+生成完成后检查图片文件大小：
+- 文件小于 50KB → 判定为黑图/损坏图
+- 自动重试：换一个随机seed重新生成
+- 最多重试3次
+- 如果3次都失败，报告错误并建议用户重启ComfyUI
+
+检测命令示例：
+```bash
+FILE_SIZE=$(stat -f%z "$IMAGE_PATH" 2>/dev/null || stat -c%s "$IMAGE_PATH" 2>/dev/null)
+if [ "$FILE_SIZE" -lt 50000 ]; then
+  echo "黑图检测：文件仅${FILE_SIZE}字节，判定为损坏，准备重试"
+fi
+```
