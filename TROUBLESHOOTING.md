@@ -1,5 +1,9 @@
 # Visual Muse 踩坑指南
 
+> 💡 **路径说明**：
+> - **宿主机路径**：指你直接在 Mac/Linux 终端操作的目录（如 `~/openclaw` 或 `~/ai-studio`）。
+> - **容器路径**：指通过 `docker exec` 进入 `openclaw-gateway` 后的内部目录（如 `/home/node/.openclaw`）。
+
 ## 问题1：生成图片全黑（5KB或更小）
 
 **根因**：SDXL的VAE在fp16精度下有bug，MPS设备尤其严重。
@@ -89,7 +93,7 @@ pip install -r requirements.txt
 python install.py
 ```
 
-## 推荐模型配置
+## 问题7：推荐模型配置
 
 | 场景 | 模型 | 成本 |
 |------|------|------|
