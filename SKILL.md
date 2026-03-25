@@ -1,7 +1,7 @@
 ---
 name: visual-muse
 description: "ComfyUI 图像生成工坊 — 用自然语言描述需求，自动生成高质量 AI 图片。支持 SDXL/Flux 多模型、风格模板自动匹配、批量生成、质量评分。说「画一张图」即可触发。"
-version: 1.0.0
+version: 1.4.0
 metadata: { "openclaw": { "emoji": "🎨", "requires": { "bins": ["python3", "curl"], "env": ["COMFYUI_API_URL"] }, "primaryEnv": "COMFYUI_API_URL" } }
 ---
 
